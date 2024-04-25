@@ -6,15 +6,29 @@ This repository contains an implementation of a **genetic algorithm (GA)**, a **
 ## Implementation
 The genetic algorithm in this repository has been specifically implemented to solve **Einstein's Challenge**, a logic puzzle that involves deducing the correct arrangement of various items based on a series of clues. The challenge is structured as follows:
 
-- There are five houses in a row, each of a different color.
-- In each house lives a person of a different nationality.
-- Each of the five owners drinks a different type of beverage, smokes a different brand of cigar, and keeps a different pet.
-- No owners have the same pet, smoke the same brand of cigar, or drink the same beverage.
+## Puzzle 
+The puzzle is the following. Let us assume that there are five houses of different colors next to each other on the same road. In each house lives a man of a different nationality. Every man has his favorite drink, his favorite brand of cigarettes, and keeps pets of a particular kind. Next we are given the following 15 statements.
 
+1. The Englishman lives in the red house.
+2. The Swede keeps dogs.
+3. The Dane drinks tea.
+4. The green house is just to the left of the white one.
+5. The owner of the green house drinks coffee.
+6. The Pall Mall smoker keeps birds.
+7. The owner of the yellow house smokes Dunhills.
+8. The man in the center house drinks milk.
+9. The Norwegian lives in the first house.
+10. The Blend smoker has a neighbor who keeps cats.
+11. The man who smokes Blue Masters drinks bier.
+12. The man who keeps horses lives next to the Dunhill smoker.
+13. The German smokes Prince.
+14. The Norwegian lives next to the blue house.
+15. The Blend smoker has a neighbor who drinks water.
 The objective is to determine who owns the fish based on the given clues, which include statements like "The Brit lives in the red house," "The Swede keeps dogs as pets," and "The Dane drinks tea."
 
 ![TABLET](https://github.com/ByteCodeBros/einstein-challenge/assets/92281096/55f80e00-c1e7-4096-af6e-5170afa028aa)
 
+For Einstein's Challenge there are 5 variables each with 5 possible assignments, generating a total of 5^5 = 3125 possible variations. Then all permutations of size 5 would be 3125^5 ~= 3e17. This is too large of a number to brute force and try all the possibilities.
 The genetic algorithm approaches this problem by representing each possible solution as an individual in the population. The fitness function evaluates how closely an individual's arrangement of houses, nationalities, beverages, cigars, and pets matches the clues provided. Through the processes of **selection, crossover, and mutation**, the algorithm iteratively improves the population until it **converges on the correct solution**.
 
 ## How the Genetic Algorithm Works
